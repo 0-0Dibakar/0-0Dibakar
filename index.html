@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Full Stack & AI/ML Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f23 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        #canvas3d {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px 60px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            border: 4px solid #00d4ff;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            object-fit: cover;
+            animation: photoGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes photoGlow {
+            from { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+            to { box-shadow: 0 0 60px rgba(0, 245, 255, 0.9), 0 0 80px rgba(255, 0, 255, 0.4); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #00f5ff, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.5)); }
+            to { filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.8)); }
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: #00d4ff;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(0, 153, 255, 0.2));
+            border: 2px solid #00d4ff;
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-btn:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(0, 212, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .social-btn:hover:before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.5);
+            border-color: #00f5ff;
+        }
+
+        .social-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+        }
+
+        .project-card:hover:before {
+            left: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: #00f5ff;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .founder-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.6);
+            background: linear-gradient(135deg, #00f5ff, #00d4ff);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            padding: 8px 16px;
+            background: rgba(0, 212, 255, 0.2);
+            border: 1px solid #00d4ff;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #00f5ff;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 0, 255, 0.5);
+        }
+
+        .skill-category h3 {
+            color: #ff00ff;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 10px 0;
+            color: #ccc;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .tagline { font-size: 1.2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas3d"></canvas>
+
+    <div class="container">
+        <header>
+            <img src="Portfolio.jpg" alt="Dibakara Mahananda" class="profile-photo">
+            <h1>Dibakara Mahananda</h1>
+            <p class="tagline">Full Stack Developer & AI/ML Engineer</p>
+            <p class="tagline" style="font-size: 1.1rem; margin-top: 10px;">Founder of Success Sprout & Despo AI</p>
+            <div class="social-links">
+                <a href="https://github.com/0-0Dibakar" target="_blank" class="social-btn">
+                    <span>🔗 GitHub</span>
+                </a>
+                <a href="https://leetcode.com/u/The_Walker_24/" target="_blank" class="social-btn">
+                    <span>💻 LeetCode</span>
+                </a>
+            </div>
+        </header>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🌱</div>
+                    <span class="founder-badge">FOUNDER</span>
+                    <h3>Success Sprout</h3>
+                    <p>An intelligent LLM and NLP-powered platform that provides personalized recommendations for tech courses and scholarships, helping students and professionals grow their careers.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">LLM</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                    <a href="https://successsprout.com" target="_blank" class="project-link">Visit Website →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <span class="founder-badge">FOUNDER</span>
+                    <h3>Despo AI</h3>
+                    <p>An advanced AI agent that intelligently compares prices across multiple e-commerce platforms in real-time, ensuring users get the best deals available online.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">AI Agent</span>
+                        <span class="tech-tag">Web Scraping</span>
+                        <span class="tech-tag">APIs</span>
+                        <span class="tech-tag">Data Analysis</span>
+                    </div>
+                    <a href="https://despoai.com" target="_blank" class="project-link">Visit Website →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>🎨 Frontend</h3>
+                    <ul>
+                        <li>React.js / Next.js</li>
+                        <li>Vue.js</li>
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript / TypeScript</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>⚙️ Backend</h3>
+                    <ul>
+                        <li>Node.js / Express</li>
+                        <li>Python / Django / Flask</li>
+                        <li>RESTful APIs</li>
+                        <li>GraphQL</li>
+                        <li>Microservices</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🤖 AI/ML</h3>
+                    <ul>
+                        <li>TensorFlow / PyTorch</li>
+                        <li>NLP & LLMs</li>
+                        <li>Computer Vision</li>
+                        <li>Scikit-learn</li>
+                        <li>Deep Learning</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🗄️ Database & Cloud</h3>
+                    <ul>
+                        <li>MongoDB / PostgreSQL</li>
+                        <li>AWS / Azure / GCP</li>
+                        <li>Docker / Kubernetes</li>
+                        <li>Redis</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Full Stack & AI/ML Engineer. Let's build something amazing together!</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Three.js 3D Animation
+        const canvas = document.getElementById('canvas3d');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.position.z = 5;
+
+        // Create particle system
+        const particles = [];
+        const particleCount = 150;
+        const geometry = new THREE.BufferGeometry();
+        const positions = [];
+        const colors = [];
+
+        for (let i = 0; i < particleCount; i++) {
+            const x = (Math.random() - 0.5) * 20;
+            const y = (Math.random() - 0.5) * 20;
+            const z = (Math.random() - 0.5) * 20;
+            
+            positions.push(x, y, z);
+            
+            const color = new THREE.Color();
+            color.setHSL(Math.random() * 0.3 + 0.5, 1, 0.5);
+            colors.push(color.r, color.g, color.b);
+        }
+
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+        geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+
+        const material = new THREE.PointsMaterial({
+            size: 0.1,
+            vertexColors: true,
+            transparent: true,
+            opacity: 0.8,
+            blending: THREE.AdditiveBlending
+        });
+
+        const particleSystem = new THREE.Points(geometry, material);
+        scene.add(particleSystem);
+
+        // Create geometric shapes
+        const torusGeometry = new THREE.TorusGeometry(1, 0.3, 16, 100);
+        const torusMaterial = new THREE.MeshBasicMaterial({
+            color: 0x00d4ff,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.3
+        });
+        const torus = new THREE.Mesh(torusGeometry, torusMaterial);
+        torus.position.set(-3, 0, -2);
+        scene.add(torus);
+
+        const sphereGeometry = new THREE.SphereGeometry(0.8, 32, 32);
+        const sphereMaterial = new THREE.MeshBasicMaterial({
+            color: 0xff00ff,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.3
+        });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        sphere.position.set(3, 0, -2);
+        scene.add(sphere);
+
+        // Mouse interaction
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            particleSystem.rotation.x += 0.001;
+            particleSystem.rotation.y += 0.002;
+
+            torus.rotation.x += 0.01;
+            torus.rotation.y += 0.01;
+
+            sphere.rotation.x += 0.01;
+            sphere.rotation.y += 0.01;
+
+            camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.05;
+            camera.position.y += (mouseY * 0.5 - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card, .skill-category').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

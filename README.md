@@ -16,7 +16,7 @@
   <a href="https://leetcode.com/u/The_Walker_24/">
     <img src="https://img.shields.io/badge/LeetCode-1000%2B-success?style=for-the-badge&logo=leetcode&logoColor=yellow" />
   </a>
-  <a href="mailto:dibakara024@email.com">
+  <a href="dibakara024@email.com">
     <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   <a href="https://www.linkedin.com/in/dibakara-mahananda-949b90201/">

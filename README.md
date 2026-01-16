@@ -1,11 +1,11 @@
 <h1 align="center">Dibakara Mahananda</h1>
 
 <p align="center">
-  <strong>Full Stack Developer (MERN) | AI/ML Engineer</strong>
+  <strong>Full Stack Developer (MERN) | AI/ML Engineer | Open Source Contributor</strong>
 </p>
 
 <p align="center">
-  Solved <strong>1000+ Problems</strong> on LeetCode
+  Solved <strong>1000+ DSA Problems</strong> on LeetCode
 </p>
 
 <p align="center">
@@ -28,45 +28,93 @@
 
 ## Engineering Profile
 
-I am a **Full Stack Developer (MERN)** and **AI/ML Engineer** with strong foundations in **data structures, algorithms**, and **production-grade system design**.
+I am a **Full Stack Developer (MERN)** and **AI/ML Engineer** with strong expertise in **data structures, algorithms, and scalable system design**.
 
-I have solved **1000+ DSA problems on LeetCode**, demonstrating deep problem-solving ability and algorithmic thinking.
+I have solved **1000+ problems on LeetCode**, reflecting strong algorithmic thinking and problem-solving skills.
 
-My work spans **scalable web applications**, **machine learning systems**, and **LLM-powered solutions**, with hands-on experience in both **research-oriented ML pipelines** and **real-world full-stack deployments**.
+My interests lie at the intersection of **modern web engineering**, **machine learning**, and **large language models (LLMs)**. I enjoy building **end-to-end systems** — from intuitive user interfaces to cloud-deployed backend services and intelligent ML pipelines.
+
+I am also an **Open Source Contribution Enthusiast**, actively learning from and contributing to collaborative, production-grade codebases.
 
 ---
 
 ## Core Competencies
 
-- **Full Stack Engineering (MERN)**  
-  Designing and building responsive, secure, and scalable web applications using MongoDB, Express, React, and Node.js.
+- **Full Stack Development (MERN)**  
+  Building responsive, secure, and scalable web applications using MongoDB, Express.js, React.js, and Node.js.
 
-- **AI / Machine Learning Systems**  
-  Developing NLP pipelines, LLM-based applications, and deep learning models using modern ML frameworks.
+- **AI / Machine Learning Engineering**  
+  Designing and implementing NLP systems, LLM-powered applications, and deep learning pipelines using modern ML frameworks.
 
-- **Algorithmic Problem Solving**  
-  Strong expertise in data structures, algorithms, and competitive programming with 1000+ solved problems.
+- **Data Structures & Algorithms**  
+  Strong command over DSA, competitive programming, and problem-solving with 1000+ solved problems.
 
 - **Cloud & Deployment**  
-  Deploying full-stack and ML systems on AWS with production-ready architecture.
+  Deploying and maintaining full-stack and ML applications on AWS using industry best practices.
+
+- **Open Source Collaboration**  
+  Enthusiastic about contributing to open-source projects, understanding large codebases, and following clean engineering practices.
 
 ---
 
 ## Technical Arsenal
 
-| Domain | Stack |
-|------|------|
-| Languages | C++, Python, JavaScript, HTML, CSS, SQL |
-| Frontend | React.js, HTML5, CSS3, JavaScript |
-| Backend | Node.js, Express.js |
-| Databases | MongoDB, SQL |
-| AI / ML | NLP, LLMs, TensorFlow, PyTorch, JAX |
-| Data Science | Pandas, NumPy |
-| Cloud | AWS (EC2, S3, IAM, Cloud basics) |
-| Tools | Git, GitHub, REST APIs |
+### Programming Languages
+- **C++**, **Python**, **JavaScript**
+- HTML5, CSS3
+- SQL
+
+### Frontend Development
+- React.js
+- HTML, CSS, JavaScript
+- Responsive UI Design
+
+### Backend Development
+- Node.js
+- Express.js
+- RESTful APIs
+- Authentication & Authorization
+
+### Databases
+- MongoDB
+- SQL (Relational Databases)
+
+### AI / Machine Learning
+- Machine Learning Fundamentals
+- Deep Learning
+- Natural Language Processing (NLP)
+- Large Language Models (LLMs)
+- TensorFlow
+- PyTorch
+- JAX
+
+### Data Science & Analysis
+- Pandas
+- NumPy
+- Data preprocessing & feature engineering
+
+### Cloud & DevOps
+- AWS (EC2, S3, IAM, Cloud fundamentals)
+- Basic CI/CD concepts
+- Docker (Foundational knowledge)
+
+### Tools & Platforms
+- Git & GitHub
+- Linux
+- VS Code
+- API Integration
+
+---
+
+## Open Source & Community
+
+- Open source contribution enthusiast
+- Actively exploring large-scale repositories
+- Passionate about clean code, documentation, and collaborative development
+- Interested in contributing to **AI/ML**, **developer tooling**, and **web infrastructure** projects
 
 ---
 
 <p align="center">
-  <i>“Strong fundamentals build scalable systems.”</i>
+  <i>“Strong fundamentals, clean code, and scalable systems.”</i>
 </p>

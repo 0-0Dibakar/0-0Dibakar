@@ -56,53 +56,21 @@ I am also an **Open Source Contribution Enthusiast**, actively learning from and
   Enthusiastic about contributing to open-source projects, understanding large codebases, and following clean engineering practices.
 
 ---
-
 ## Technical Arsenal
 
-### Programming Languages
-- **C++**, **Python**, **JavaScript**
-- HTML5, CSS3
-- SQL
+| Domain | Stack |
+|------|------|
+| Programming Languages | C++, Python, JavaScript (ES6+), HTML5, CSS3, SQL |
+| Frontend Engineering | React.js, Modern UI Architecture, Responsive Design |
+| Backend Engineering | Node.js, Express.js, RESTful & API-driven Systems |
+| Databases | MongoDB, SQL-based Relational Databases |
+| Artificial Intelligence | Machine Learning, Deep Learning, NLP, LLMs |
+| ML Frameworks | TensorFlow, PyTorch, JAX |
+| Data Processing | Pandas, NumPy, Data Cleaning & Feature Engineering |
+| Cloud Platforms | AWS (EC2, S3, IAM), Cloud-Native Fundamentals |
+| DevOps Practices | Docker (Foundational), CI/CD Concepts |
+| Engineering Tools | Git, GitHub, Linux, API Integration |
 
-### Frontend Development
-- React.js
-- HTML, CSS, JavaScript
-- Responsive UI Design
-
-### Backend Development
-- Node.js
-- Express.js
-- RESTful APIs
-- Authentication & Authorization
-
-### Databases
-- MongoDB
-- SQL (Relational Databases)
-
-### AI / Machine Learning
-- Machine Learning Fundamentals
-- Deep Learning
-- Natural Language Processing (NLP)
-- Large Language Models (LLMs)
-- TensorFlow
-- PyTorch
-- JAX
-
-### Data Science & Analysis
-- Pandas
-- NumPy
-- Data preprocessing & feature engineering
-
-### Cloud & DevOps
-- AWS (EC2, S3, IAM, Cloud fundamentals)
-- Basic CI/CD concepts
-- Docker (Foundational knowledge)
-
-### Tools & Platforms
-- Git & GitHub
-- Linux
-- VS Code
-- API Integration
 
 ---
 

@@ -1,107 +1,72 @@
-Dibakara Mahananda
+<h1 align="center">Dibakara Mahananda</h1>
 
-**MERN Stack & AI/ML Engineer | Open Source Enthusiast**
+<p align="center">
+  <strong>Full Stack Developer (MERN) | AI/ML Engineer</strong>
+</p>
 
-🎓 **B.Tech Graduate – National Institute of Technology, Rourkela**
-💻 Full‑Stack Web Developer (MERN) & AI/ML Engineer
-🚀 Interested in scalable systems, intelligent applications, and production‑grade AI
+<p align="center">
+  Solved <strong>1000+ Problems</strong> on LeetCode
+</p>
 
----
+<p align="center">
+  National Institute of Technology, Rourkela
+</p>
 
-## 👋 About Me
-
-I am a **MERN Stack and AI/ML Engineer**, graduating from **NIT Rourkela**, with a strong foundation in **computer science, data structures, and applied machine learning**. I enjoy building **end‑to‑end products** that combine modern web technologies with **data‑driven and AI‑powered intelligence**.
-
-My experience spans **frontend development, backend system design, databases, and applied machine learning**, with a growing focus on **LLMs, MLOps, and real‑world AI deployment**.
-
----
-
-## 🧠 Core Competencies
-
-* **MERN Stack Development**: Designing and building scalable full‑stack web applications using MongoDB, Express.js, React.js, and Node.js.
-* **AI / Machine Learning**: Developing, training, and evaluating ML models; applying deep learning and NLP techniques.
-* **System Design**: REST APIs, authentication, database schema design, and performance optimization.
-* **Data & Model Pipelines**: Data preprocessing, feature engineering, model deployment, and monitoring.
-* **Problem Solving**: Strong grasp of DSA, algorithms, and competitive programming fundamentals.
-
----
-
-## 🛠️ Technical Arsenal
-
-### **Frontend**
-
-* React.js, Next.js
-* JavaScript (ES6+), TypeScript
-* HTML5, CSS3, Tailwind CSS, Bootstrap
-* Redux, React Query
-
-### **Backend**
-
-* Node.js, Express.js
-* REST APIs, JWT Authentication
-* WebSockets
-
-### **Databases**
-
-* MongoDB, Mongoose
-* PostgreSQL, MySQL
-* Redis (basic caching)
-
-### **AI / Machine Learning**
-
-* Python
-* NumPy, Pandas, Matplotlib, Seaborn
-* Scikit‑learn
-* TensorFlow / PyTorch
-* NLP: Transformers, Hugging Face
-* LLMs, Prompt Engineering, RAG (basic–intermediate)
-
-### **MLOps & Deployment**
-
-* Docker
-* FastAPI / Flask
-* Model serving & API integration
-* GitHub Actions (CI/CD basics)
-
-### **Cloud & DevOps**
-
-* AWS (EC2, S3 – basics)
-* Vercel, Render
-* Linux
-
-### **Tools & Others**
-
-* Git & GitHub
-* Postman
-* VS Code
-* LeetCode / Competitive Programming
+<p align="center">
+  <a href="https://leetcode.com/your-username">
+    <img src="https://img.shields.io/badge/LeetCode-1000%2B-success?style=for-the-badge&logo=leetcode&logoColor=yellow" />
+  </a>
+  <a href="mailto:your@email.com">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/your-profile">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
 
 ---
 
-## 📌 Projects Highlights
+## Engineering Profile
 
-* **AI‑Powered Web Application** – MERN app integrated with ML/LLM backend
-* **Machine Learning Models** – Classification, regression, and NLP projects
-* **Full‑Stack Systems** – Auth‑based dashboards, REST APIs, CRUD platforms
+I am a **Full Stack Developer (MERN)** and **AI/ML Engineer** with strong foundations in **data structures, algorithms**, and **production-grade system design**.
 
-*(Add links to your best repositories here)*
+I have solved **1000+ DSA problems on LeetCode**, demonstrating deep problem-solving ability and algorithmic thinking.
 
----
-
-## 📊 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME\&show_icons=true\&theme=radical)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME\&layout=compact\&theme=radical)
+My work spans **scalable web applications**, **machine learning systems**, and **LLM-powered solutions**, with hands-on experience in both **research-oriented ML pipelines** and **real-world full-stack deployments**.
 
 ---
 
-## 🔗 Connect With Me
+## Core Competencies
 
-* 💼 LinkedIn: [https://linkedin.com/in/YOUR_LINK](https://linkedin.com/in/YOUR_LINK)
-* 📧 Email: [your.email@example.com](mailto:your.email@example.com)
-* 💻 LeetCode: [https://leetcode.com/YOUR_USERNAME](https://leetcode.com/YOUR_USERNAME)
+- **Full Stack Engineering (MERN)**  
+  Designing and building responsive, secure, and scalable web applications using MongoDB, Express, React, and Node.js.
+
+- **AI / Machine Learning Systems**  
+  Developing NLP pipelines, LLM-based applications, and deep learning models using modern ML frameworks.
+
+- **Algorithmic Problem Solving**  
+  Strong expertise in data structures, algorithms, and competitive programming with 1000+ solved problems.
+
+- **Cloud & Deployment**  
+  Deploying full-stack and ML systems on AWS with production-ready architecture.
 
 ---
 
-⭐ *Always learning, always building.*
+## Technical Arsenal
+
+| Domain | Stack |
+|------|------|
+| Languages | C++, Python, JavaScript, HTML, CSS, SQL |
+| Frontend | React.js, HTML5, CSS3, JavaScript |
+| Backend | Node.js, Express.js |
+| Databases | MongoDB, SQL |
+| AI / ML | NLP, LLMs, TensorFlow, PyTorch, JAX |
+| Data Science | Pandas, NumPy |
+| Cloud | AWS (EC2, S3, IAM, Cloud basics) |
+| Tools | Git, GitHub, REST APIs |
+
+---
+
+<p align="center">
+  <i>“Strong fundamentals build scalable systems.”</i>
+</p>

@@ -1,7 +1,7 @@
 <h1 align="center">Dibakara Mahananda</h1>  
 
 <p align="center">  
-<strong>Full Stack Developer (MERN) | AI/ML Engineer | AI Chip Design | Open source contribution enthusiast</strong> 
+<strong>Full Stack Developer (MERN) | AI/ML Engineer |Wireless Communication| Open source contribution enthusiast</strong> 
 </p>  
 
 <p align="center">  
